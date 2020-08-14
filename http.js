@@ -1,8 +1,9 @@
 import axios from 'axios'
-import router from './src/router'
-import Vue from 'vue'
+// 引入nprogress
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
+NProgress.inc(0.2)
+NProgress.configure({ easing: 'ease', speed: 500, showSpinner: false })
 
 const http = axios.create({
   baseURL:'http://127.0.0.1:8888/api/private/v1/'

@@ -10,6 +10,7 @@ import "./assets/css/global.css";
 import "./assets/fonts/iconfont.css";
 import http from "../http.js";
 
+
 Vue.prototype.$http = http;
 Vue.prototype.$message = message;
 Vue.config.productionTip = false;
