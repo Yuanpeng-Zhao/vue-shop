@@ -5,6 +5,17 @@ const login = () => import("../views/login");
 const home = () => import("../views/home");
 const welcome = () => import("../views/welcome");
 const users = () => import("../components/user/users");
+const Rights = () => import("../components/power/Rights.vue");
+const Roles = () => import("../components/power/Roles.vue");
+
+const Cate = () => import("../components/goods/Cate.vue");
+const Params = () => import("../components/goods/Params.vue");
+
+const GoodsList = () => import("../components/goods/List.vue");
+const Add = () => import("../components/goods/Add.vue");
+
+const Order = () => import("../components/order/Order.vue");
+const Report = () => import("../components/report/Report.vue");
 
 Vue.use(VueRouter);
 
@@ -23,18 +34,50 @@ const routes = [
     name: "home",
     component: home,
     redirect: "/welcome",
-    children:[
+    children: [
       {
-        path:'/welcome',
-        name:'welcome',
-        component:welcome
+        path: "/welcome",
+        name: "welcome",
+        component: welcome,
       },
       {
-        path:'/users',
-        name:'users',
-        component:users
-      }
-    ]
+        path: "/users",
+        name: "users",
+        component: users,
+      },
+      {
+        path: "/rights",
+        component: Rights,
+      },
+      {
+        path: "/roles",
+        component: Roles,
+      },
+      {
+        path: "/categories",
+        component: Cate,
+      },
+      {
+        path: "/params",
+        component: Params,
+      },
+      {
+        path: "/goods",
+        component: GoodsList,
+      },
+      {
+        path: "/goods/add",
+        component: Add,
+      },
+      {
+        path: "/orders",
+        component: Order,
+      },
+      {
+        path: "/reports",
+        component: Report,
+      },
+    ],
   },
 ];
 
